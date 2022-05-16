@@ -18,44 +18,53 @@ function getRandomNumMinMax (rangeMin, rangeMax){
 }
 
 // Ciclo per generare quadrati, inserire numeri e aggiungere evento click
-for (i = 0; i < 64; i++){
-    const divEl = createMyElement();
-    container.append(divEl);
-
-    divEl.addEventListener ("click",
-        function click() {
-            if (divEl.classList[1] === "backgroundlightblue") {
-                divEl.classList.remove("backgroundlightblue")
-            } else {
-                divEl.classList.add("backgroundlightblue")
-            }
-        }
-    )
-
-    if (difficulty === 1) {
+if (difficulty === 1) {
+    for (i = 0; i < 100; i++){
+        const divEl = createMyElement();
+        container.append(divEl);
         divEl.append(getRandomNumMinMax(1, 100));
-    } else if (difficulty === 2) {
+
+        divEl.addEventListener ("click",
+            function click() {
+                if (divEl.classList[1] === "backgroundlightblue") {
+                    divEl.classList.remove("backgroundlightblue")
+                } else {
+                    divEl.classList.add("backgroundlightblue");
+                }
+            }
+        )
+    }
+} else if (difficulty === 2) {
+    for (i = 0; i < 81; i++){
+        const divEl = createMyElement();
+        container.append(divEl);
         divEl.append(getRandomNumMinMax(1, 81));
-    } else if (difficulty === 3) {
+
+        divEl.addEventListener ("click",
+            function click() {
+                if (divEl.classList[1] === "backgroundlightblue") {
+                    divEl.classList.remove("backgroundlightblue")
+                } else {
+                    divEl.classList.add("backgroundlightblue");
+                }
+            }
+        )
+    }
+} else if (difficulty === 3) {
+    for (i = 0; i < 49; i++){
+        const divEl = createMyElement();
+        container.append(divEl);
         divEl.append(getRandomNumMinMax(1, 49));
+
+        divEl.addEventListener ("click",
+            function click() {
+                if (divEl.classList[1] === "backgroundlightblue") {
+                    divEl.classList.remove("backgroundlightblue")
+                } else {
+                    divEl.classList.add("backgroundlightblue");
+                }
+            }
+        )
     }
 }
 
-
-
-
-
-
-
-
-// function createRandArray (numItems, min, max){
-//     const arrInt = [];
-//     while ( arrInt.lenght < numItems) {
-//         let randNumInt = getRandomMinMax (min, max);
-//         if(!arrInt.includes(randNumInt)){
-//             arrInt.push(randNumInt);
-//         }
-//     }
-//     return arrInt;
-// }
-// console.log(createRandArray(64, 1, 100));
